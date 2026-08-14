@@ -1,0 +1,8 @@
+# Mac bilde-bibliotek fra Finder
+.DS_Store
+
+# Visual Studio
+.vs/
+
+# VS Code
+.vscode/
