@@ -101,7 +101,7 @@
             deler av siden skal være.
           </p>
           <p>Alle HTML-dokumenter må inneholde noen grunnleggende tagger:</p>
-          <ul style="margin: 0.5rem 0; padding-left: 1.25rem">
+          <ul>
             <li><code>&lt;html&gt;</code> – omslutter hele dokumentet</li>
             <li>
               <code>&lt;head&gt;</code> – inneholder informasjon om siden (som
@@ -115,17 +115,17 @@
 
         <section class="block block--example">
           <p class="block__label">// eksempel</p>
-          <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Min første side&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Hei verden!&lt;/h1&gt;
-    &lt;p&gt;Dette er min første HTML-side.&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+          <pre><code><!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Min første side</title>
+  </head>
+  <body>
+    <h1>Hei verden!</h1>
+    <p>Dette er min første HTML-side.</p>
+  </body>
+</html></code></pre>
         </section>
 
         <section class="block block--download">
@@ -142,17 +142,11 @@
               href="https://www.sublimetext.com/"
               target="_blank"
               rel="noopener noreferrer"
-              style="
-                font-weight: 600;
-                color: var(--html-accent);
-                text-decoration: underline;
-              "
+              class="download-link"
               >↓ Last ned Sublime Text</a
             >
           </p>
-          <p
-            style="font-size: 0.9rem; color: var(--ink-soft); margin-top: 1rem"
-          >
+          <p class="text-small">
             Etter du har lastet ned, kjør installasjonen som en vanlig
             applikasjon.
           </p>
@@ -163,9 +157,9 @@
           <h2>Oppgave: Din første HTML-side</h2>
 
           <p><strong>Steg 1: Opprett mapper</strong></p>
-          <ol style="margin: 0.5rem 0; padding-left: 1.25rem">
+          <ol>
             <li>Åpne «Filutforsker» (Windows) eller «Finder» (Mac)</li>
-            <li>Gå til din hjemmemappe i OneDrive (AFK)</li>
+            <li>Gå til din hjemmemappe eller skrivebordet</li>
             <li>Opprett en ny mappe som heter <code>IT1</code></li>
             <li>
               Gå inn i <code>IT1</code>-mappen og opprett en ny mappe som heter
@@ -174,7 +168,7 @@
           </ol>
 
           <p><strong>Steg 2: Opprett HTML-filen</strong></p>
-          <ol style="margin: 0.5rem 0; padding-left: 1.25rem">
+          <ol>
             <li>Åpne Sublime Text</li>
             <li>Lag en ny fil (Ctrl+N eller Cmd+N)</li>
             <li>Skriv inn HTML-koden fra eksemplet over</li>
@@ -185,7 +179,7 @@
           </ol>
 
           <p><strong>Steg 3: Åpne siden i nettleseren</strong></p>
-          <ol style="margin: 0.5rem 0; padding-left: 1.25rem">
+          <ol>
             <li>Gå til mappen <code>mine første sider</code> i Filutforsker</li>
             <li>
               Høyreklikk på <code>side1.html</code> og velg «Åpne med» →

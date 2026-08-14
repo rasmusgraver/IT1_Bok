@@ -284,6 +284,26 @@ code {
   background: var(--js-soft);
 }
 
+/* ---------- content list and links ---------- */
+
+.content ul,
+.content ol {
+  margin: 0.5rem 0;
+  padding-left: 1.25rem;
+}
+
+.download-link {
+  font-weight: 600;
+  color: var(--html-accent);
+  text-decoration: underline;
+}
+
+.text-small {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin-top: 1rem;
+}
+
 /* ---------- forside: fagkort ---------- */
 
 .track-grid {
