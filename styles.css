@@ -305,7 +305,17 @@ h2 {
   margin: 0;
 }
 
-.track-card p:last-child {
+.track-card h2 {
+  margin-bottom: 0;
+}
+
+.track-card h2 + p {
+  font-size: 1.1rem;
+  margin: 0;
+  margin-top: -10px;
+}
+
+.track-card p:last-of-type {
   color: var(--ink-soft);
   font-size: 0.9rem;
   margin: 0;
