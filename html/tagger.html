@@ -1,90 +1,186 @@
 <!doctype html>
 <html lang="no">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Viktige tagger · IT1</title>
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="layout">
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="sidebar"
-      >
-        <span></span><span></span><span></span>
-        <span class="sr-only">Åpne meny</span>
-      </button>
-      <aside class="sidebar" id="sidebar">
-        <a class="brand" href="../index.html"
-          >IT1<span class="brand__cursor" aria-hidden="true">▍</span></a
-        >
-        <nav class="sidebar__nav" aria-label="Faginnhold">
-          <a class="nav-home" href="../index.html">// forside</a>
-          <div class="nav-group">
-            <p class="nav-group__label">
-              <span class="dot dot--html"></span>// html
-            </p>
-            <ul class="nav-group__list">
-              <li>
-                <a class="nav-link" href="../html/intro.html">Introduksjon</a>
-              </li>
-              <li>
-                <a class="nav-link is-active" href="../html/tagger.html"
-                  >Viktige tagger</a
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Viktige tagger · IT1</title>
+        <link rel="stylesheet" href="../styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="layout">
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="sidebar"
+            >
+                <span></span><span></span><span></span>
+                <span class="sr-only">Åpne meny</span>
+            </button>
+            <aside class="sidebar" id="sidebar">
+                <a class="brand" href="../index.html"
+                    >IT1<span class="brand__cursor" aria-hidden="true"
+                        >▍</span
+                    ></a
                 >
-              </li>
-              <li>
-                <a class="nav-link" href="../html/semantikk.html"
-                  >Semantiske tagger</a
-                >
-              </li>
-              <li><a class="nav-link" href="../html/forms.html">Forms</a></li>
-            </ul>
-          </div>
-          <a class="nav-link" href="../css/grunnleggende.html">
-            <p class="nav-group__label">
-              <span class="dot dot--css"></span>// css
-            </p>
-          </a>
+                <nav class="sidebar__nav" aria-label="Faginnhold">
+                    <a class="nav-home" href="../index.html">// forside</a>
+                    <div class="nav-group">
+                        <p class="nav-group__label">
+                            <span class="dot dot--html"></span>// html
+                        </p>
+                        <ul class="nav-group__list">
+                            <li>
+                                <a class="nav-link" href="../html/intro.html"
+                                    >Introduksjon</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="nav-link is-active"
+                                    href="../html/tagger.html"
+                                    >Viktige tagger</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="nav-link"
+                                    href="../html/semantikk.html"
+                                    >Semantiske tagger</a
+                                >
+                            </li>
+                            <li>
+                                <a class="nav-link" href="../html/forms.html"
+                                    >Forms</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="nav-link" href="../css/grunnleggende.html">
+                        <p class="nav-group__label">
+                            <span class="dot dot--css"></span>// css
+                        </p>
+                    </a>
 
-          <a class="nav-link" href="../js/grunnleggende.html">
-            <p class="nav-group__label">
-              <span class="dot dot--js"></span>// javascript
-            </p>
-          </a>
-        </nav>
-      </aside>
-      <main class="content">
-        <p class="eyebrow">// html</p>
-        <h1>Viktige tagger</h1>
-        <p class="lede">
-          De vanligste HTML-taggene du kommer til å bruke hele året.
-        </p>
+                    <a class="nav-link" href="../js/grunnleggende.html">
+                        <p class="nav-group__label">
+                            <span class="dot dot--js"></span>// javascript
+                        </p>
+                    </a>
+                </nav>
+            </aside>
+            <main class="content">
+                <p class="eyebrow">// html</p>
+                <h1>Viktige tagger</h1>
+                <p class="lede">
+                    De vanligste HTML-taggene du kommer til å bruke hele året.
+                </p>
 
-        <section class="block block--theory">
-          <p class="block__label">// forklaring</p>
-          <p>[Placeholder – kort teori om viktige tagger kommer her.]</p>
-        </section>
+                <section class="block block--theory">
+                    <p class="block__label">// hva er en tag?</p>
+                    <p>
+                        En <strong>tag</strong> er et element i HTML som
+                        forteller nettleseren hva en del av innholdet er (for
+                        eksempel en overskrift, et avsnitt eller en liste).
+                        Tagger kommer ofte i par: en åpningstag og en slutt-tag,
+                        for eksempel <code>&lt;h1&gt;...&lt;/h1&gt;</code>.
+                    </p>
+                    <p>
+                        Noen vanlige tagger du bør kunne: <code>h1</code>,
+                        <code>h2</code>, <code>h3</code>, <code>p</code>,
+                        <code>ol</code>, <code>ul</code>, <code>li</code>,
+                        <code>img</code>, <code>a</code>.
+                    </p>
+                </section>
 
-        <section class="block block--example">
-          <p class="block__label">// eksempel</p>
-          <pre><code>&lt;!-- eksempelkode kommer her --&gt;</code></pre>
-        </section>
+                <section class="block block--example">
+                    <p class="block__label">// eksempler på tagger</p>
+                    <pre><code>&lt;h1&gt;Dette er en H1&lt;/h1&gt;
+&lt;h2&gt;En underoverskrift (H2)&lt;/h2&gt;
+&lt;p&gt;Dette er et avsnitt med tekst.&lt;/p&gt;
 
-        <section class="block block--task">
-          <p class="block__label">// oppgave</p>
-          <p>[Placeholder – kort oppgave til elevene kommer her.]</p>
-        </section>
-      </main>
-    </div>
-    <script src="../script.js"></script>
-  </body>
+&lt;ul&gt;
+  &lt;li&gt;Punkt én&lt;/li&gt;
+  &lt;li&gt;Punkt to&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Første steg&lt;/li&gt;
+  &lt;li&gt;Andre steg&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt; !-- lenke -- &gt;
+&lt;a href="https://www.example.com"&gt;Gå til example.com&lt;/a&gt;
+
+&lt; !-- bilde (merk: img har ikke slutt-tag) -- &gt;
+&lt;img src="../images/eksempel.jpg" alt="Beskrivelse av bildet"&gt;</code></pre>
+                </section>
+
+                <section class="block block--theory">
+                    <p class="block__label">// attributter</p>
+                    <p>
+                        Tagger kan ha <strong>attributter</strong> som gir
+                        ekstra informasjon. For eksempel har
+                        <code>a</code>-taggen en <code>href</code>-attributt som
+                        forteller hvor lenken går, og <code>img</code> har
+                        <code>src</code> for bildebanen og <code>alt</code> for
+                        alternativ tekst (viktig for tilgjengelighet).
+                    </p>
+                    <p>
+                        Noen tagger er <strong>void</strong> (uten slutt-tag).
+                        Et vanlig eksempel er <code>img</code> — du skriver
+                        <code>&lt;img ...&gt;</code> og trenger ikke
+                        <code>&lt;/img&gt;</code>.
+                    </p>
+                </section>
+
+                <section class="block block--task">
+                    <p class="block__label">// oppgave</p>
+                    <h2>Praktisk øvelse</h2>
+                    <ol>
+                        <li>
+                            Lag en side i en teksteditor med tre overskrifter:
+                            H1, H2 og H3.
+                        </li>
+                        <li>
+                            Legg til et avsnitt (<code>p</code>) under hver
+                            overskrift.
+                        </li>
+                        <li>
+                            Lag en ordnet (<code>ol</code>) og en uordnet
+                            (<code>ul</code>) liste med minst to
+                            <code>li</code>-elementer hver.
+                        </li>
+                        <li>
+                            Legg inn et bilde med riktig <code>src</code> og
+                            <code>alt</code>. (Bruk et lokalt bilde eller en
+                            placeholder-URL.)
+                        </li>
+                        <li>
+                            Legg til en lenke (<code>a</code>) som peker til
+                            <code>https://www.example.com</code>.
+                        </li>
+                        <li>
+                            Spesialutfordring: prøv å fjerne slutt-taggen fra en
+                            ikke-void tag (f.eks. ta bort
+                            <code>&lt;/p&gt;</code>) og se hva som skjer i
+                            nettleseren.
+                        </li>
+                    </ol>
+
+                    <p>
+                        <strong>Spørsmål for refleksjon:</strong> Hvilke tagger
+                        trenger slutt-tag, og hvilke gjør det ikke? Hvorfor er
+                        <code>alt</code>-attributtet viktig for bilder?
+                    </p>
+                </section>
+            </main>
+        </div>
+        <script src="../script.js"></script>
+    </body>
 </html>
