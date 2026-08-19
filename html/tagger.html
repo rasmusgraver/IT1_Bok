@@ -85,26 +85,47 @@
                     <p class="block__label">// hva er en tag?</p>
                     <p>
                         En <strong>tag</strong> er et element i HTML som
-                        forteller nettleseren hva en del av innholdet er (for
-                        eksempel en overskrift, et avsnitt eller en liste).
-                        Tagger kommer ofte i par: en åpningstag og en slutt-tag,
-                        for eksempel <code>&lt;h1&gt;...&lt;/h1&gt;</code>.
-                    </p>
-                    <p>
-                        Noen vanlige tagger du bør kunne: <code>h1</code>,
-                        <code>h2</code>, <code>h3</code>, <code>p</code>,
-                        <code>ol</code>, <code>ul</code>, <code>li</code>,
-                        <code>img</code>, <code>a</code>.
+                        forteller nettleseren hva en del av innholdet er. Tagger
+                        kommer ofte i par: en åpningstag og en slutt-tag, for
+                        eksempel <code>&lt;h1&gt;...&lt;/h1&gt;</code>.
                     </p>
                 </section>
 
-                <section class="block block--example">
-                    <p class="block__label">// eksempler på tagger</p>
-                    <pre><code>&lt;h1&gt;Dette er en H1&lt;/h1&gt;
-&lt;h2&gt;En underoverskrift (H2)&lt;/h2&gt;
-&lt;p&gt;Dette er et avsnitt med tekst.&lt;/p&gt;
+                <section class="block block--theory">
+                    <p class="block__label">// overskrifter (h1, h2, h3)</p>
+                    <p>
+                        Overskrifter gir struktur og prioritering til innholdet
+                        på siden.
+                    </p>
+                    <pre><code>&lt;h1&gt;Hovedtittel (H1)&lt;/h1&gt;
+&lt;h2&gt;Underoverskrift (H2)&lt;/h2&gt;
+&lt;h3&gt;Mindre overskrift (H3)&lt;/h3&gt;</code></pre>
+                    <p class="text-small">
+                        Oppgave: Lag tre overskrifter på egen side og se hvordan
+                        de påvirker struktur og skriftstørrelse.
+                    </p>
+                </section>
 
-&lt;ul&gt;
+                <section class="block block--theory">
+                    <p class="block__label">// avsnitt (p)</p>
+                    <p>
+                        Avsnitt brukes til løpende tekst. Hver
+                        <code>p</code>-tag representerer et nytt avsnitt.
+                    </p>
+                    <pre><code>&lt;p&gt;Dette er et avsnitt med tekst.&lt;/p&gt;</code></pre>
+                    <p class="text-small">
+                        Oppgave: Skriv to avsnitt og se hvordan nettleseren
+                        bryter linjene.
+                    </p>
+                </section>
+
+                <section class="block block--theory">
+                    <p class="block__label">// lister (ul, ol, li)</p>
+                    <p>
+                        Uordnede lister (<code>ul</code>) gir punkter, mens
+                        ordnede lister (<code>ol</code>) gir nummererte steg.
+                    </p>
+                    <pre><code>&lt;ul&gt;
   &lt;li&gt;Punkt én&lt;/li&gt;
   &lt;li&gt;Punkt to&lt;/li&gt;
 &lt;/ul&gt;
@@ -112,75 +133,86 @@
 &lt;ol&gt;
   &lt;li&gt;Første steg&lt;/li&gt;
   &lt;li&gt;Andre steg&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ol&gt;</code></pre>
+                    <p class="text-small">
+                        Oppgave: Lag én <code>ul</code> og én
+                        <code>ol</code> med minst to elementer hver.
+                    </p>
+                </section>
 
-&lt; !-- lenke -- &gt;
-&lt;a href="https://www.example.com"&gt;Gå til example.com&lt;/a&gt;
+                <section class="block block--theory">
+                    <p class="block__label">// lenker (a)</p>
+                    <p>
+                        Lenker bruker <code>a</code>-taggen og krever vanligvis
+                        <code>href</code>-attributtet for destinasjon.
+                    </p>
+                    <pre><code>&lt;a href="https://www.example.com"&gt;Gå til example.com&lt;/a&gt;</code></pre>
+                    <p class="text-small">
+                        Oppgave: Legg til en lenke til en favorittside og åpne
+                        den i nettleseren.
+                    </p>
+                </section>
 
-&lt; !-- bilde (merk: img har ikke slutt-tag) -- &gt;
-&lt;img src="../images/eksempel.jpg" alt="Beskrivelse av bildet"&gt;</code></pre>
+                <section class="block block--theory">
+                    <p class="block__label">// bilder (img)</p>
+                    <p>
+                        Bildetaggen <code>img</code> bruker <code>src</code> for
+                        filbanen og <code>alt</code> for alternativ tekst. Merk
+                        at <code>img</code> er en void-tag og har ingen
+                        slutt-tag.
+                    </p>
+                    <p>Eksempler (bruker filer i <code>images/</code>):</p>
+                    <pre><code>&lt;!-- enkeltbilde --&gt;
+&lt;img src="../images/cat1.jpg" alt="Katt som sitter"&gt;
+
+&lt;!-- galleri --&gt;
+&lt;div class="example-gallery"&gt;
+  &lt;img src="../images/cat1.jpg" alt="Katt 1"&gt;
+  &lt;img src="../images/cat2.jpg" alt="Katt 2"&gt;
+  &lt;img src="../images/cat3.jpg" alt="Katt 3"&gt;
+&lt;/div&gt;</code></pre>
+                    <p class="text-small">
+                        Oppgave: Bruk ett av bildene fra <code>images/</code> og
+                        skriv en god <code>alt</code>-tekst. Prøv også galleriet
+                        og bytt ut med <code>cat4.jpg</code>,
+                        <code>cat5.jpg</code> eller <code>cat6.jpg</code>.
+                    </p>
                 </section>
 
                 <section class="block block--theory">
                     <p class="block__label">// attributter</p>
                     <p>
-                        Tagger kan ha <strong>attributter</strong> som gir
-                        ekstra informasjon. For eksempel har
-                        <code>a</code>-taggen en <code>href</code>-attributt som
-                        forteller hvor lenken går, og <code>img</code> har
-                        <code>src</code> for bildebanen og <code>alt</code> for
-                        alternativ tekst (viktig for tilgjengelighet).
+                        Vi har sett at noen tagger har attributter, som gir
+                        ekstra informasjon. Vanlige attributter:
+                        <code>href</code> (for <code>a</code>),
+                        <code>src</code> og <code>alt</code> (for
+                        <code>img</code>), samt <code>class</code> og
+                        <code>id</code>.
                     </p>
-                    <p>
-                        Noen tagger er <strong>void</strong> (uten slutt-tag).
-                        Et vanlig eksempel er <code>img</code> — du skriver
-                        <code>&lt;img ...&gt;</code> og trenger ikke
-                        <code>&lt;/img&gt;</code>.
-                    </p>
+                    <pre><code>&lt;a href="/side.html" class="btn"&gt;Klikk her&lt;/a&gt;
+&lt;img src="/bilde.png" alt="Beskrivelse" id="logo"&gt;</code></pre>
                 </section>
 
                 <section class="block block--task">
-                    <p class="block__label">// oppgave</p>
-                    <h2>Praktisk øvelse</h2>
+                    <p class="block__label">// oppsummeringsoppgave</p>
+                    <h2>Bygg en liten demo-side</h2>
                     <ol>
+                        <li>Lag en side som bruker H1, H2 og H3.</li>
                         <li>
-                            Lag en side i en teksteditor med tre overskrifter:
-                            H1, H2 og H3.
+                            Legg til minst to avsnitt, én uordnet og én ordnet
+                            liste.
                         </li>
                         <li>
-                            Legg til et avsnitt (<code>p</code>) under hver
-                            overskrift.
+                            Legg inn en lenke og et bilde med
+                            <code>alt</code>-tekst.
                         </li>
                         <li>
-                            Lag en ordnet (<code>ol</code>) og en uordnet
-                            (<code>ul</code>) liste med minst to
-                            <code>li</code>-elementer hver.
-                        </li>
-                        <li>
-                            Legg inn et bilde med riktig <code>src</code> og
-                            <code>alt</code>. (Bruk et lokalt bilde eller en
-                            placeholder-URL.)
-                        </li>
-                        <li>
-                            Legg til en lenke (<code>a</code>) som peker til
-                            <code>https://www.example.com</code>.
-                        </li>
-                        <li>
-                            Spesialutfordring: prøv å fjerne slutt-taggen fra en
-                            ikke-void tag (f.eks. ta bort
-                            <code>&lt;/p&gt;</code>) og se hva som skjer i
-                            nettleseren.
+                            Prøv å fjerne en slutt-tag fra en tag som skal ha
+                            det. Hva skjer? Test på ulike tagger.
                         </li>
                     </ol>
-
-                    <p>
-                        <strong>Spørsmål for refleksjon:</strong> Hvilke tagger
-                        trenger slutt-tag, og hvilke gjør det ikke? Hvorfor er
-                        <code>alt</code>-attributtet viktig for bilder?
-                    </p>
                 </section>
             </main>
         </div>
-        <script src="../script.js"></script>
     </body>
 </html>
