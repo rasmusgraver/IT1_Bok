@@ -1,130 +1,110 @@
 <!doctype html>
 <html lang="no">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IT1 · Nettbasert kompendium</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="layout">
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="sidebar"
-      >
-        <span></span><span></span><span></span>
-        <span class="sr-only">Åpne meny</span>
-      </button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>IT1 · Nettbasert kompendium</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="layout">
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="sidebar"
+            >
+                <span></span><span></span><span></span>
+                <span class="sr-only">Åpne meny</span>
+            </button>
 
-      <aside class="sidebar" id="sidebar">
-        <a class="brand" href="index.html"
-          >IT1<span class="brand__cursor" aria-hidden="true">▍</span></a
-        >
-
-        <nav class="sidebar__nav" aria-label="Faginnhold">
-          <a class="nav-home is-active" href="index.html">// forside</a>
-
-          <div class="nav-group">
-            <p class="nav-group__label">
-              <span class="dot dot--html"></span>// html
-            </p>
-            <ul class="nav-group__list">
-              <li>
-                <a class="nav-link" href="html/intro.html">Introduksjon</a>
-              </li>
-              <li>
-                <a class="nav-link" href="html/tagger.html">Viktige tagger</a>
-              </li>
-              <li>
-                <a class="nav-link" href="html/semantikk.html"
-                  >Semantiske tagger</a
+            <aside class="sidebar" id="sidebar">
+                <a class="brand" href="index.html"
+                    >IT1<span class="brand__cursor" aria-hidden="true"
+                        >▍</span
+                    ></a
                 >
-              </li>
-              <li><a class="nav-link" href="html/forms.html">Forms</a></li>
-            </ul>
-          </div>
 
-          <div class="nav-group">
-            <p class="nav-group__label">
-              <span class="dot dot--css"></span>// css
-            </p>
-            <ul class="nav-group__list">
-              <li>
-                <a class="nav-link" href="css/grunnleggende.html"
-                  >Grunnleggende</a
-                >
-              </li>
-              <li><a class="nav-link" href="css/flexbox.html">Flexbox</a></li>
-              <li><a class="nav-link" href="css/grid.html">Grid</a></li>
-            </ul>
-          </div>
+                <nav class="sidebar__nav" aria-label="Faginnhold">
+                    <a class="nav-home is-active" href="index.html"
+                        >// forside</a
+                    >
 
-          <div class="nav-group">
-            <p class="nav-group__label">
-              <span class="dot dot--js"></span>// javascript
-            </p>
-            <ul class="nav-group__list">
-              <li>
-                <a class="nav-link" href="js/grunnleggende.html"
-                  >Grunnleggende</a
-                >
-              </li>
-              <li><a class="nav-link" href="js/onclick.html">onclick</a></li>
-              <li>
-                <a class="nav-link" href="js/addeventlistener.html"
-                  >addEventListener</a
-                >
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </aside>
+                    <a class="nav-link" href="html/intro.html">
+                        <p class="nav-group__label">
+                            <span class="dot dot--html"></span>// html
+                        </p>
+                    </a>
 
-      <main class="content content--home">
-        <p class="eyebrow">// velkommen</p>
-        <h1>IT1</h1>
-        <p class="lede">
-          Dette er det digitale kompendiet for faget. Gjennom året bygger vi det
-          opp steg for steg — fra de første HTML-taggene til at siden du
-          navigerer i akkurat nå kan style seg selv og reagere på klikk. Bruk
-          menyen til venstre for å hoppe mellom temaene.
-        </p>
+                    <a class="nav-link" href="css/grunnleggende.html">
+                        <p class="nav-group__label">
+                            <span class="dot dot--css"></span>// css
+                        </p>
+                    </a>
 
-        <div class="track-grid">
-          <a class="track-card track-card--html" href="html/intro.html">
-            <p class="track-card__eyebrow">
-              <span class="dot dot--html"></span>// html
-            </p>
-            <h2>Struktur</h2>
-            <p>HTML - Innholdet på siden.</p>
-            <p>Tagger, semantikk og skjemaer.</p>
-          </a>
-          <a class="track-card track-card--css" href="css/grunnleggende.html">
-            <p class="track-card__eyebrow">
-              <span class="dot dot--css"></span>// css
-            </p>
-            <h2>Stil</h2>
-            <p>CSS - Hvordan siden ser ut!</p>
-            <p>Og etterhvert: Boksmodell, flexbox og grid.</p>
-          </a>
-          <a class="track-card track-card--js" href="js/grunnleggende.html">
-            <p class="track-card__eyebrow">
-              <span class="dot dot--js"></span>// javascript
-            </p>
-            <h2>Oppførsel</h2>
-            <p>JS - Gi "liv" til siden!</p>
-            <p>Variabler, funksjoner og hendelser. Hva siden gjør.</p>
-          </a>
+                    <a class="nav-link" href="js/grunnleggende.html">
+                        <p class="nav-group__label">
+                            <span class="dot dot--js"></span>// javascript
+                        </p>
+                    </a>
+                </nav>
+            </aside>
+
+            <main class="content content--home">
+                <p class="eyebrow">// velkommen</p>
+                <h1>IT1</h1>
+                <p class="lede">
+                    Dette er det digitale kompendiet for faget. Gjennom året
+                    bygger vi det opp steg for steg — fra de første HTML-taggene
+                    til at siden du navigerer i akkurat nå kan style seg selv og
+                    reagere på klikk. Bruk menyen til venstre for å hoppe mellom
+                    temaene.
+                </p>
+
+                <div class="track-grid">
+                    <a
+                        class="track-card track-card--html"
+                        href="html/intro.html"
+                    >
+                        <p class="track-card__eyebrow">
+                            <span class="dot dot--html"></span>// html
+                        </p>
+                        <h2>Struktur</h2>
+                        <p>HTML - Innholdet på siden.</p>
+                        <p>Tagger, semantikk og skjemaer.</p>
+                    </a>
+                    <a
+                        class="track-card track-card--css"
+                        href="css/grunnleggende.html"
+                    >
+                        <p class="track-card__eyebrow">
+                            <span class="dot dot--css"></span>// css
+                        </p>
+                        <h2>Stil</h2>
+                        <p>CSS - Hvordan siden ser ut!</p>
+                        <p>Og etterhvert: Boksmodell, flexbox og grid.</p>
+                    </a>
+                    <a
+                        class="track-card track-card--js"
+                        href="js/grunnleggende.html"
+                    >
+                        <p class="track-card__eyebrow">
+                            <span class="dot dot--js"></span>// javascript
+                        </p>
+                        <h2>Oppførsel</h2>
+                        <p>JS - Gi "liv" til siden!</p>
+                        <p>
+                            Variabler, funksjoner og hendelser. Hva siden gjør.
+                        </p>
+                    </a>
+                </div>
+            </main>
         </div>
-      </main>
-    </div>
-    <script src="script.js"></script>
-  </body>
+        <script src="script.js"></script>
+    </body>
 </html>
