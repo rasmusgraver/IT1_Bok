@@ -148,9 +148,12 @@
         ok = false;
       }
     }
+    if (button._copyTimeout) {
+      clearTimeout(button._copyTimeout);
+    }
     button.textContent = ok ? "kopiert ✓" : "kopier mislyktes";
     const original = "⧉ kopi";
-    window.setTimeout(() => {
+    button._copyTimeout = setTimeout(() => {
       button.textContent = original;
     }, 1600);
   };
