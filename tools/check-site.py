@@ -50,7 +50,6 @@ for path in sorted(PAGES):
 
     # 2) script.js skal være med på alle sider
     if 'src="' not in src or re.search(r'<script[^>]+src="([^"]*script\.js)"', src) is None:
-        warnings.append(f"{rel}: mangler <script src=\"...script.js\">")
         errors.append(f"{rel}: mangler script.js")
 
     # 3) aktiv navigasjonslenke skal matche siden selv
@@ -63,7 +62,6 @@ for path in sorted(PAGES):
             )
             break
     if 'aria-current="page"' not in src:
-        warnings.append(f"{rel}: ingen aria-current=\"page\" på aktiv lenke")
         errors.append(f"{rel}: mangler aria-current=\"page\"")
 
     # 4) favicon

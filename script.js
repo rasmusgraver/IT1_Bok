@@ -169,7 +169,6 @@
     const button = document.createElement("button");
     button.type = "button";
     button.className = "code-copy";
-    button.setAttribute("aria-label", "Kopier kode");
     button.textContent = "⧉ kopi";
 
     box.appendChild(button);
