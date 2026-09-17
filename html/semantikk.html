@@ -1,83 +1,61 @@
 <!doctype html>
 <html lang="no">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Semantiske tagger · IT1</title>
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Semantiske tagger · IT1</title>
+        <meta name="description" content="Nettbasert kompendium for IT1 — HTML-siden: tagger, semantikk og skjemaer." />
+        <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+        <meta property="og:title" content="Semantiske tagger · IT1" />
+        <meta property="og:description" content="Nettbasert kompendium for IT1 — HTML-siden: tagger, semantikk og skjemaer." />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="nb_NO" />
+        <link rel="stylesheet" href="../styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   </head>
   <body>
     <div class="layout">
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="sidebar"
-      >
+      <a class="skip-link" href="#main">Hopp til innhold</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="sidebar">
         <span></span><span></span><span></span>
         <span class="sr-only">Åpne meny</span>
       </button>
       <aside class="sidebar" id="sidebar">
-        <a class="brand" href="../index.html"
-          >IT1<span class="brand__cursor" aria-hidden="true">▍</span></a
-        >
+        <a class="brand" href="../index.html">IT1<span class="brand__cursor" aria-hidden="true">▍</span></a>
         <nav class="sidebar__nav" aria-label="Faginnhold">
-          <a class="nav-home" href="../index.html">// forside</a>
-          <div class="nav-group">
-            <p class="nav-group__label">
-              <span class="dot dot--html"></span>// html
-            </p>
-            <ul class="nav-group__list">
-              <li>
-                <a class="nav-link" href="../html/intro.html">Introduksjon</a>
-              </li>
-              <li>
-                <a class="nav-link" href="../html/tagger.html"
-                  >Viktige tagger</a
-                >
-              </li>
-              <li>
-                <a class="nav-link is-active" href="../html/semantikk.html"
-                  >Semantiske tagger</a
-                >
-              </li>
-              <li><a class="nav-link" href="../html/forms.html">Forms</a></li>
-            </ul>
-          </div>
-          <a class="nav-link" href="../css/grunnleggende.html">
-            <p class="nav-group__label">
-              <span class="dot dot--css"></span>// css
-            </p>
-          </a>
-
-          <a class="nav-link" href="../js/grunnleggende.html">
-            <p class="nav-group__label">
-              <span class="dot dot--js"></span>// javascript
-            </p>
-          </a>
+        <a class="nav-home" href="../index.html">// forside</a>
+<div class="nav-group"><p class="nav-group__label"><span class="dot dot--html"></span>// html</p><ul class="nav-group__list">
+<li><a class="nav-link" href="../html/intro.html">Introduksjon</a></li>
+<li><a class="nav-link" href="../html/tagger.html">Viktige tagger</a></li>
+<li><a class="nav-link is-active" aria-current="page" href="../html/semantikk.html">Semantiske tagger</a></li>
+<li><a class="nav-link" href="../html/forms.html">Forms</a></li>
+</ul></div>
+<a class="nav-link" href="../css/grunnleggende.html"><p class="nav-group__label"><span class="dot dot--css"></span>// css</p></a>
+<a class="nav-link" href="../js/grunnleggende.html"><p class="nav-group__label"><span class="dot dot--js"></span>// javascript</p></a>
         </nav>
       </aside>
-      <main class="content">
-        <p class="eyebrow">// html</p>
+      <main class="content" id="main">
+        <p class="eyebrow">// html</p><h1>Semantiske tagger</h1><p class="eyebrow">// html</p>
         <h1>Semantiske tagger</h1>
         <p class="lede">
           Tagger som forteller hva innholdet betyr, ikke bare hvordan det ser
           ut.
         </p>
 
-        <section class="block block--theory">
-          <p class="block__label">// forklaring</p>
+        <section class="block block--theory"><h2 class="block__label" id="sec-1">// forklaring</h2>
           <p>
             I stedet for å bare skrive div tagger overalt, kan vi bruke noen
             andre tagger som gir litt bedre struktur til HTML siden vår.
           </p>
           <p>Mer info kommer!</p>
         </section>
+<nav class="page-nav" aria-label="Kapittelnavigasjon">
+<a class="page-nav__prev" href="../html/tagger.html">← Viktige tagger</a>
+<span class="page-nav__cur">// Semantiske tagger</span>
+<a class="page-nav__next" href="../html/forms.html">Forms →</a>
+</nav>
+<p class="page-home"><a href="../index.html">↑ tilbake til forsiden</a></p>
       </main>
     </div>
     <script src="../script.js"></script>
