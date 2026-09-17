@@ -347,7 +347,7 @@ def main():
     for pid in ORDER:
         out = os.path.join(ROOT, BY_ID[pid][1])
         with open(out, "w") as fh:
-            fh.write(render_page(pid))
+            fh.write(render_page(pid) + "\n")
         print("wrote", out)
 
 
