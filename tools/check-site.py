@@ -21,7 +21,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 PAGES = []
 for dirpath, _dirs, files in os.walk(ROOT):
-    if ".git" in dirpath or ".lavish" in dirpath or "tools" in dirpath:
+    reldir = os.path.relpath(dirpath, ROOT)
+    parts = reldir.split(os.sep)
+    if (reldir != "." and any(p.startswith(".") for p in parts)) or "tools" in parts:
         continue
     for fn in files:
         if fn.endswith(".html"):

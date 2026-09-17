@@ -162,23 +162,57 @@ def toc(fragment):
 
 def upgrade_labels(fragment):
     """Seksjonsmerkene blir ekte overskrifter (h2) med anker-id (R-05).
-    Nedlastingsblokkene («📥 …») beholdes som p-etiketter."""
+    Nedlastingsblokkene («📥 …») beholdes som p-etiketter.
+    Oppgaveblokker som allerede har en egen <h2> får den oppgradert i stedet."""
     counter = {"n": 0}
 
-    def repl(m):
-        label = m.group(3).strip()
+    def process(m):
+        section_class = m.group(1)
+        inner = m.group(2)
+
+        label_match = re.match(r'\s*<p class="block__label">(.*?)</p>\s*', inner, re.S)
+        if not label_match:
+            return m.group(0)
+
+        label = label_match.group(1).strip()
         if label.startswith("📥"):
             return m.group(0)
+
         counter["n"] += 1
         n = counter["n"]
+        after_label = inner[label_match.end():]
+        h2_match = re.search(r'<h2([^>]*)>(.*?)</h2>', after_label, re.S)
+
+        if h2_match:
+            attrs = h2_match.group(1).strip()
+            content = h2_match.group(2)
+            if 'class="' in attrs:
+                attrs = attrs.replace('class="', 'class="block__label ')
+            elif "class='" in attrs:
+                attrs = attrs.replace("class='", "class='block__label ")
+            elif attrs:
+                attrs = f'class="block__label" {attrs}'
+            else:
+                attrs = 'class="block__label"'
+            before_h2 = after_label[:h2_match.start()]
+            after_h2 = after_label[h2_match.end():]
+            return (
+                f'<section class="{section_class}">'
+                f'{before_h2}<h2 {attrs} id="sec-{n}">{content}</h2>{after_h2}'
+                f'</section>'
+            )
+
         return (
-            f'<section class="{m.group(2)}">'
+            f'<section class="{section_class}">'
             f'<h2 class="block__label" id="sec-{n}">{label}</h2>'
+            f'{after_label}</section>'
         )
 
-    # <section class="block block--theory"> → <section ... id="sec-N"><h2 class="block__label" id="sec-N">…
-    pattern = re.compile(r'(<section class="(block block--(?:theory|example|task))">\s*<p class="block__label">(.*?)</p>)', re.S)
-    return pattern.sub(repl, fragment)
+    pattern = re.compile(
+        r'<section class="(block block--(?:theory[^"]*|example[^"]*|task[^"]*))">(.*?)</section>',
+        re.S,
+    )
+    return pattern.sub(process, fragment)
 
 
 def pagination(page_id):

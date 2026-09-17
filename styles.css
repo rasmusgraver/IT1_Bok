@@ -180,11 +180,15 @@ a {
 .nav-link {
   display: flex;
   align-items: center;
-  padding: 0.4rem 0.5rem 0.4rem 1.5rem;
+  padding: 0.4rem 0.5rem 0.4rem 0.5rem;
   border-radius: var(--radius);
   text-decoration: none;
   font-size: 0.925rem;
   color: var(--ink);
+}
+
+.nav-group .nav-link {
+  padding-left: 1.5rem;
 }
 
 .nav-link:hover {
