@@ -267,6 +267,25 @@ def render_page(page_id):
 <html lang="no">
   <head>
         {head(page_id)}
+<noscript>
+    <style>
+      @media (max-width: 880px) {{
+        .menu-toggle {{ display: none !important; }}
+        .sidebar {{
+          position: static !important;
+          transform: none !important;
+          width: auto !important;
+          max-width: none !important;
+          height: auto !important;
+          box-shadow: none !important;
+          border-right: none !important;
+          border-bottom: 1px solid var(--line);
+          z-index: auto !important;
+        }}
+        .content {{ padding-top: 3rem !important; }}
+      }}
+    </style>
+    </noscript>
   </head>
   <body>
     <div class="layout">
