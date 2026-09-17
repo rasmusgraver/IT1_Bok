@@ -1,86 +1,71 @@
 <!doctype html>
 <html lang="no">
-    <head>
+  <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>onclick · IT1</title>
+        <meta name="description" content="Nettbasert kompendium for IT1 — JavaScript-siden: variabler, funksjoner og hendelser." />
+        <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+        <meta property="og:title" content="onclick · IT1" />
+        <meta property="og:description" content="Nettbasert kompendium for IT1 — JavaScript-siden: variabler, funksjoner og hendelser." />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="nb_NO" />
         <link rel="stylesheet" href="../styles.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-    <body>
-        <div class="layout">
-            <button
-                class="menu-toggle"
-                type="button"
-                aria-expanded="false"
-                aria-controls="sidebar"
-            >
-                <span></span><span></span><span></span>
-                <span class="sr-only">Åpne meny</span>
-            </button>
-            <aside class="sidebar" id="sidebar">
-                <a class="brand" href="../index.html"
-                    >IT1<span class="brand__cursor" aria-hidden="true"
-                        >▍</span
-                    ></a
-                >
-                <nav class="sidebar__nav" aria-label="Faginnhold">
-                    <a class="nav-home" href="../index.html">// forside</a>
-
-                    <a class="nav-link" href="../html/intro.html">
-                        <p class="nav-group__label">
-                            <span class="dot dot--html"></span>// html
-                        </p>
-                    </a>
-
-                    <a class="nav-link" href="../css/grunnleggende.html">
-                        <p class="nav-group__label">
-                            <span class="dot dot--css"></span>// css
-                        </p>
-                    </a>
-
-                    <div class="nav-group">
-                        <p class="nav-group__label">
-                            <span class="dot dot--js"></span>// javascript
-                        </p>
-                        <ul class="nav-group__list">
-                            <li>
-                                <a
-                                    class="nav-link"
-                                    href="../js/grunnleggende.html"
-                                    >Grunnleggende</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    class="nav-link is-active"
-                                    href="../js/onclick.html"
-                                    >onclick</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    class="nav-link"
-                                    href="../js/addeventlistener.html"
-                                    >addEventListener</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </aside>
-            <main class="content">
-                <p class="eyebrow">// javascript</p>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<noscript>
+    <style>
+      @media (max-width: 880px) {
+        .menu-toggle { display: none !important; }
+        .sidebar {
+          position: static !important;
+          transform: none !important;
+          width: auto !important;
+          max-width: none !important;
+          height: auto !important;
+          box-shadow: none !important;
+          border-right: none !important;
+          border-bottom: 1px solid var(--line);
+          z-index: auto !important;
+        }
+        .content { padding-top: 3rem !important; }
+      }
+    </style>
+    </noscript>
+  </head>
+  <body>
+    <div class="layout">
+      <a class="skip-link" href="#main">Hopp til innhold</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="sidebar">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Åpne meny</span>
+      </button>
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="../index.html">IT1<span class="brand__cursor" aria-hidden="true">▍</span></a>
+        <nav class="sidebar__nav" aria-label="Faginnhold">
+        <a class="nav-home" href="../index.html">// forside</a>
+<a class="nav-link" href="../html/intro.html"><p class="nav-group__label"><span class="dot dot--html"></span>// html</p></a>
+<a class="nav-link" href="../css/grunnleggende.html"><p class="nav-group__label"><span class="dot dot--css"></span>// css</p></a>
+<div class="nav-group"><p class="nav-group__label"><span class="dot dot--js"></span>// javascript</p><ul class="nav-group__list">
+<li><a class="nav-link" href="../js/grunnleggende.html">Grunnleggende</a></li>
+<li><a class="nav-link is-active" aria-current="page" href="../js/onclick.html">onclick</a></li>
+</ul></div>
+        </nav>
+      </aside>
+      <main class="content" id="main">
+        <p class="eyebrow">// javascript</p><h1>onclick</h1><p class="eyebrow">// javascript</p>
                 <h1>onclick</h1>
                 <p class="lede">
                     Kjøre kode når noe klikkes, direkte i HTML-attributtet.
                 </p>
-            </main>
-        </div>
-        <script src="../script.js"></script>
-    </body>
+<nav class="page-nav" aria-label="Kapittelnavigasjon">
+<a class="page-nav__prev" href="../js/grunnleggende.html">← Grunnleggende</a>
+<span class="page-nav__cur">// onclick</span>
+<span class="page-nav__spacer"></span>
+</nav>
+<p class="page-home"><a href="../index.html">↑ tilbake til forsiden</a></p>
+      </main>
+    </div>
+    <script src="../script.js"></script>
+  </body>
 </html>

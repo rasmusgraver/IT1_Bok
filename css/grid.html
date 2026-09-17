@@ -1,85 +1,79 @@
 <!doctype html>
 <html lang="no">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grid · IT1</title>
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grid · IT1</title>
+        <meta name="description" content="Nettbasert kompendium for IT1 — CSS-siden: selektorer, boksmodellen, flexbox og grid." />
+        <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+        <meta property="og:title" content="Grid · IT1" />
+        <meta property="og:description" content="Nettbasert kompendium for IT1 — CSS-siden: selektorer, boksmodellen, flexbox og grid." />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="nb_NO" />
+        <link rel="stylesheet" href="../styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<noscript>
+    <style>
+      @media (max-width: 880px) {
+        .menu-toggle { display: none !important; }
+        .sidebar {
+          position: static !important;
+          transform: none !important;
+          width: auto !important;
+          max-width: none !important;
+          height: auto !important;
+          box-shadow: none !important;
+          border-right: none !important;
+          border-bottom: 1px solid var(--line);
+          z-index: auto !important;
+        }
+        .content { padding-top: 3rem !important; }
+      }
+    </style>
+    </noscript>
   </head>
   <body>
     <div class="layout">
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="sidebar"
-      >
+      <a class="skip-link" href="#main">Hopp til innhold</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="sidebar">
         <span></span><span></span><span></span>
         <span class="sr-only">Åpne meny</span>
       </button>
       <aside class="sidebar" id="sidebar">
-        <a class="brand" href="../index.html"
-          >IT1<span class="brand__cursor" aria-hidden="true">▍</span></a
-        >
+        <a class="brand" href="../index.html">IT1<span class="brand__cursor" aria-hidden="true">▍</span></a>
         <nav class="sidebar__nav" aria-label="Faginnhold">
-          <a class="nav-home" href="../index.html">// forside</a>
-
-          <a class="nav-link" href="../html/intro.html">
-            <p class="nav-group__label">
-              <span class="dot dot--html"></span>// html
-            </p>
-          </a>
-
-          <div class="nav-group">
-            <p class="nav-group__label">
-              <span class="dot dot--css"></span>// css
-            </p>
-            <ul class="nav-group__list">
-              <li>
-                <a class="nav-link" href="../css/grunnleggende.html"
-                  >Grunnleggende</a
-                >
-              </li>
-              <li>
-                <a class="nav-link" href="../css/flexbox.html">Flexbox</a>
-              </li>
-              <li>
-                <a class="nav-link is-active" href="../css/grid.html">Grid</a>
-              </li>
-            </ul>
-          </div>
-
-          <a class="nav-link" href="../js/grunnleggende.html">
-            <p class="nav-group__label">
-              <span class="dot dot--js"></span>// javascript
-            </p>
-          </a>
+        <a class="nav-home" href="../index.html">// forside</a>
+<a class="nav-link" href="../html/intro.html"><p class="nav-group__label"><span class="dot dot--html"></span>// html</p></a>
+<div class="nav-group"><p class="nav-group__label"><span class="dot dot--css"></span>// css</p><ul class="nav-group__list">
+<li><a class="nav-link" href="../css/grunnleggende.html">Grunnleggende</a></li>
+<li><a class="nav-link" href="../css/flexbox.html">Flexbox</a></li>
+<li><a class="nav-link is-active" aria-current="page" href="../css/grid.html">Grid</a></li>
+</ul></div>
+<a class="nav-link" href="../js/grunnleggende.html"><p class="nav-group__label"><span class="dot dot--js"></span>// javascript</p></a>
         </nav>
       </aside>
-      <main class="content">
-        <p class="eyebrow">// css</p>
+      <main class="content" id="main">
+        <p class="eyebrow">// css</p><h1>Grid</h1><nav class="toc" aria-label="På denne siden"><p class="toc__label">// på denne siden</p><ol class="toc__list"><li><a href="#sec-1">// forklaring</a></li>
+<li><a href="#sec-2">// eksempel</a></li>
+<li><a href="#sec-3">// oppgave</a></li></ol></nav><p class="eyebrow">// css</p>
         <h1>Grid</h1>
         <p class="lede">Layout i rader og kolonner.</p>
 
-        <section class="block block--theory">
-          <p class="block__label">// forklaring</p>
-          <p>[Placeholder – kort teori om grid kommer her.]</p>
+        <section class="block block--theory"><h2 class="block__label" id="sec-1">// forklaring</h2><p>[Placeholder – kort teori om grid kommer her.]</p>
         </section>
 
-        <section class="block block--example">
-          <p class="block__label">// eksempel</p>
-          <pre><code>&lt;!-- eksempelkode kommer her --&gt;</code></pre>
+        <section class="block block--example"><h2 class="block__label" id="sec-2">// eksempel</h2><pre><code>&lt;!-- eksempelkode kommer her --&gt;</code></pre>
         </section>
 
-        <section class="block block--task">
-          <p class="block__label">// oppgave</p>
-          <p>[Placeholder – kort oppgave til elevene kommer her.]</p>
+        <section class="block block--task"><h2 class="block__label" id="sec-3">// oppgave</h2><p>[Placeholder – kort oppgave til elevene kommer her.]</p>
         </section>
+<nav class="page-nav" aria-label="Kapittelnavigasjon">
+<a class="page-nav__prev" href="../css/flexbox.html">← Flexbox</a>
+<span class="page-nav__cur">// Grid</span>
+<a class="page-nav__next" href="../js/grunnleggende.html">Grunnleggende →</a>
+</nav>
+<p class="page-home"><a href="../index.html">↑ tilbake til forsiden</a></p>
       </main>
     </div>
     <script src="../script.js"></script>
